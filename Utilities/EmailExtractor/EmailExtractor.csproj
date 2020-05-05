@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="RtfPipe" Version="1.0.7388.1242" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\MsgReaderCore\MsgReader.csproj" />
   </ItemGroup>
 

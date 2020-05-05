@@ -24,7 +24,7 @@
 // THE SOFTWARE.
 //
 
-//using System.Text;
+using System.Text;
 
 namespace MsgReader.Outlook
 {

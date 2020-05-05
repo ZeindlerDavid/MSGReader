@@ -31,7 +31,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.FilesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +45,8 @@
             this.LanguageFrenchMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageGermanMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageDutchMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.LanguageSimpChineseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageSpanishMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LanguageSimpChineseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LanguageTradChineseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.genereateHyperlinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -81,31 +80,18 @@
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(178, 17);
             this.StatusLabel.Text = "Select a MSG or EML file to open";
+            this.StatusLabel.Visible = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.FilesListBox);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(531, 94);
+            this.panel2.Size = new System.Drawing.Size(531, 32);
             this.panel2.TabIndex = 13;
-            // 
-            // FilesListBox
-            // 
-            this.FilesListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FilesListBox.FormattingEnabled = true;
-            this.FilesListBox.Location = new System.Drawing.Point(6, 22);
-            this.FilesListBox.Margin = new System.Windows.Forms.Padding(2);
-            this.FilesListBox.Name = "FilesListBox";
-            this.FilesListBox.Size = new System.Drawing.Size(521, 56);
-            this.FilesListBox.TabIndex = 17;
-            this.FilesListBox.DoubleClick += new System.EventHandler(this.FilesListBox_DoubleClick);
             // 
             // label1
             // 
@@ -205,7 +191,7 @@
             // 
             this.LanguageEnglishMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.LanguageEnglishMenuItem.Name = "LanguageEnglishMenuItem";
-            this.LanguageEnglishMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageEnglishMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageEnglishMenuItem.Text = "English US (default)";
             this.LanguageEnglishMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
@@ -213,7 +199,7 @@
             // 
             this.LanguageFrenchMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.LanguageFrenchMenuItem.Name = "LanguageFrenchMenuItem";
-            this.LanguageFrenchMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageFrenchMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageFrenchMenuItem.Text = "French";
             this.LanguageFrenchMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
@@ -221,7 +207,7 @@
             // 
             this.LanguageGermanMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.LanguageGermanMenuItem.Name = "LanguageGermanMenuItem";
-            this.LanguageGermanMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageGermanMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageGermanMenuItem.Text = "German";
             this.LanguageGermanMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
@@ -229,28 +215,28 @@
             // 
             this.LanguageDutchMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.LanguageDutchMenuItem.Name = "LanguageDutchMenuItem";
-            this.LanguageDutchMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageDutchMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageDutchMenuItem.Text = "Dutch";
             this.LanguageDutchMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
-            // 
-            // LanguageSimpChineseMenuItem
-            // 
-            this.LanguageSimpChineseMenuItem.Name = "LanguageSimpChineseMenuItem";
-            this.LanguageSimpChineseMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.LanguageSimpChineseMenuItem.Text = "Simp. Chinese";
-            this.LanguageSimpChineseMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
             // LanguageSpanishMenuItem
             // 
             this.LanguageSpanishMenuItem.Name = "LanguageSpanishMenuItem";
-            this.LanguageSpanishMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageSpanishMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageSpanishMenuItem.Text = "Spanish";
             this.LanguageSpanishMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
+            // 
+            // LanguageSimpChineseMenuItem
+            // 
+            this.LanguageSimpChineseMenuItem.Name = "LanguageSimpChineseMenuItem";
+            this.LanguageSimpChineseMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.LanguageSimpChineseMenuItem.Text = "Simp. Chinese";
+            this.LanguageSimpChineseMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
             // LanguageTradChineseMenuItem
             // 
             this.LanguageTradChineseMenuItem.Name = "LanguageTradChineseMenuItem";
-            this.LanguageTradChineseMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LanguageTradChineseMenuItem.Size = new System.Drawing.Size(177, 22);
             this.LanguageTradChineseMenuItem.Text = "Trad. Chinese";
             this.LanguageTradChineseMenuItem.Click += new System.EventHandler(this.LanguageToolStripMenuItem_Click);
             // 
@@ -268,11 +254,11 @@
             this.groupBox1.Controls.Add(this.webBrowser1);
             this.groupBox1.Controls.Add(this.toolStrip1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 94);
+            this.groupBox1.Location = new System.Drawing.Point(0, 32);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(531, 336);
+            this.groupBox1.Size = new System.Drawing.Size(531, 398);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Preview";
@@ -284,7 +270,7 @@
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(2);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(10, 10);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(527, 294);
+            this.webBrowser1.Size = new System.Drawing.Size(527, 356);
             this.webBrowser1.TabIndex = 12;
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated_1);
             // 
@@ -380,7 +366,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox FilesListBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStrip toolStrip1;

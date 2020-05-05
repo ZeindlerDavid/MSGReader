@@ -35,6 +35,7 @@ namespace MsgViewer
         /// Used to track all the created temporary folders
         /// </summary>
         readonly List<string> _tempFolders = new List<string>();
+
         #endregion
 
         #region Form events
@@ -213,11 +214,11 @@ namespace MsgViewer
                 if (!string.IsNullOrEmpty(files[0]))
                     webBrowser1.Navigate(files[0]);
 
-                FilesListBox.Items.Clear();
+                // FilesListBox.Items.Clear();
 
                 foreach (var file in files)
                 {
-                    FilesListBox.Items.Add(file);
+                    // FilesListBox.Items.Add(file);
                 }
             }
             catch (Exception ex)
@@ -329,14 +330,14 @@ namespace MsgViewer
         #region FilesListBox_DoubleClick
         private void FilesListBox_DoubleClick(object sender, EventArgs e)
         {
-            if (FilesListBox.Items.Count <= 0) return;
-            var file = FilesListBox.SelectedItem as string;
-            if (string.IsNullOrEmpty(file) || !File.Exists(file)) return;
-            var fileInfo = new FileInfo(file);
-            if (fileInfo.Extension.ToLowerInvariant() == ".msg")
-                Process.Start(Application.ExecutablePath, file);
-            else
-                Process.Start(file);
+            //if (FilesListBox.Items.Count <= 0) return;
+            //var file = FilesListBox.SelectedItem as string;
+            //if (string.IsNullOrEmpty(file) || !File.Exists(file)) return;
+            //var fileInfo = new FileInfo(file);
+            //if (fileInfo.Extension.ToLowerInvariant() == ".msg")
+            //    Process.Start(Application.ExecutablePath, file);
+            //else
+            //    Process.Start(file);
         }
         #endregion
     }
